@@ -32,7 +32,7 @@ neptune.init(api_token=os.getenv('NEPTUNE_API_TOKEN'),
              project_qualified_name=os.getenv('NEPTUNE_PROJECT_NAME'))
 
 # Create an experiment and log hyperparameters
-neptune.create_experiment('lightGBM-on-wine',
+neptune.create_experiment('DannyMorris-Test',
                           params={**PARAMS,
                                   'num_boosting_round': NUM_BOOSTING_ROUNDS})
 
