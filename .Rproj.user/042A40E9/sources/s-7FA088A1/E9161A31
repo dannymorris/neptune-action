@@ -3,7 +3,7 @@
     "path": "~/data-science-projects/neptune-action/.github/workflows/neptune_action.yml",
     "project_path": ".github/workflows/neptune_action.yml",
     "type": "yaml",
-    "hash": "2293617685",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1613669267369.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "44,85",
-        "scrollLine": "24"
+        "cursorPosition": "33,78",
+        "scrollLine": "5"
     },
     "folds": "",
-    "lastKnownWriteTime": 1613669460,
+    "lastKnownWriteTime": 1613673840,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1613669460776,
+    "last_content_update": 1613673840374,
     "read_only": false,
     "read_only_alternatives": []
 }
