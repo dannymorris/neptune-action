@@ -3,6 +3,7 @@ name: Neptune actions
 on:
   push:
     branches: [master]
+  repository_dispatch:
 
 jobs:
   compare-experiments:
@@ -32,3 +33,10 @@ jobs:
           export NEPTUNE_EXPERIMENT_TAG_ID=$(uuidgen)
           python train.py
           echo ::set-output name=experiment_tag_id::$NEPTUNE_EXPERIMENT_TAG_ID
+          
+      - name: PING - Dispatch initiating repository event
+        run: |
+          curl -X POST https://api.github.com/repos/Data-Science-Squad/dssquad-ml/dispatches \
+          -H 'Accept: application/vnd.github.everest-preview+json' \
+          -u ${{ secrets.ACCESS_TOKEN }} \
+          --data '{"event_type": "ping", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
