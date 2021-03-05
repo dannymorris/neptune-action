@@ -28,11 +28,8 @@ jobs:
       - name: Setup main branch environment and run experiment
         id: experiment_main
         run: |
-          pip install -r requirements.txt
-          export NEPTUNE_EXPERIMENT_TAG_ID=$(uuidgen)
           python train.py
-          echo ::set-output name=experiment_tag_id::$NEPTUNE_EXPERIMENT_TAG_ID
-          
+
       - name: Invoke workflow in another repo with inputs
         uses: benc-uk/workflow-dispatch@v1
         with:
